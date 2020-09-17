@@ -1,0 +1,18 @@
+#center-columns {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-gap: 10px; }
+  #center-columns div {
+    background-color: #2196F3;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px; }
+
+#header-options {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px; }
+  #header-options div {
+    padding: 10px; }
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,32 @@
+$background-color: #2196F3;
+
+#center-columns {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-gap: 10px;
+
+  div {
+    background-color: $background-color;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+}
+
+#header {
+  //display: flex;
+}
+
+#header-title {
+  //justify-content: flex-start;
+}
+
+#header-options {
+  display: flex;
+  justify-content: flex-end;
+  //float:right;
+  padding: 10px;
+  div {
+    padding: 10px;
+  }
+}
