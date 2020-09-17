@@ -1,25 +1,45 @@
 #center-columns {
   display: grid;
   grid-template-columns: 25% 50% 25%;
-  grid-gap: 10px; }
-  #center-columns div {
-    background-color: #2196F3;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 30px; }
+  grid-gap: 10px; 
+}
+
+#center-columns div {
+  background-color: #2196F3;
+  padding: 20px 0;
+  font-size: 30px;
+}
 
 #header-options {
   display: flex;
   justify-content: flex-end;
   padding: 10px; }
-  #header-options div {
-    padding: 10px; }
 
-#col-center {
+#header-options div {
+  padding: 10px; 
+}
+
+.course-menu {
+  text-align: left;
+  padding: 5%;
+}
+
+.subject {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+}
+
+.subject-title {
+  text-align: left;
+  padding: 10px;
+}
+
+.image {
+  float: left; 
+}
 
 .video {
-  float: left; }
+  float: left; 
+}
 
 /*# sourceMappingURL=index.css.map */
