@@ -15,6 +15,10 @@
   #header-options div {
     padding: 10px; }
 
+#col-center {
+  display: flex;
+  flex-direction: column; }
+
 .video {
   float: left; }
 
