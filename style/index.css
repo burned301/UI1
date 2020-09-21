@@ -84,5 +84,11 @@
   content: "@alumnos.uc3m.es";
 }
 
+th, td {
+  padding: 15px;
+}
 
-/*# sourceMappingURL=index.css.map */
+td {
+  text-align: right;
+}
+
