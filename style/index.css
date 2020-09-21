@@ -59,11 +59,30 @@
 }
 
 .image {
-  float: left; 
+  float: left;
+  margin: 1%;
 }
 
 .video {
-  float: left; 
+  float: left;
+  margin: 1%;
 }
+
+.student {
+
+}
+
+.name::before{
+  content: "Name: ";
+}
+
+.surname::before{
+  content: "Surname: ";
+}
+
+.email::after{
+  content: "@alumnos.uc3m.es";
+}
+
 
 /*# sourceMappingURL=index.css.map */
