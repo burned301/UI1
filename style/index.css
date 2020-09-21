@@ -72,6 +72,14 @@
 
 }
 
+.forum-message {
+  display: flex;
+}
+
+.message-count::after {
+  content: "messages";
+}
+/*# sourceMappingURL=index.css.map */
 .name::before{
   content: "Name: ";
 }
