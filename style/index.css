@@ -1,7 +1,8 @@
 #center-columns {
   display: grid;
-  grid-template-columns: 25% 50% 25%;
-  grid-gap: 10px; 
+  grid-template-columns: 24.5% 50% 24.5%;
+  grid-gap: 0.5%;
+  margin: 0.5%;
 }
 
 #center-columns div {
@@ -10,17 +11,27 @@
   font-size: 30px;
 }
 
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#header-title {
+  display: flex;
+  margin-left: 0.5%;
+}
+
 #header-options {
   display: flex;
   background-color: turquoise;
-  justify-content: flex-end;
-  float:right;
-  padding: 7px; }
+  margin-right: 0.5%;
+}
 
 #header {
   display: flex;
   background-color: #2196F3;
-  margin: 10px;
+  margin: 0.5%;
 }
 
 #header-title{
