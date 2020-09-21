@@ -12,11 +12,24 @@
 
 #header-options {
   display: flex;
+  background-color: turquoise;
   justify-content: flex-end;
-  padding: 10px; }
+  float:right;
+  padding: 7px; }
+
+#header {
+  display: flex;
+  background-color: #2196F3;
+  margin: 10px;
+}
+
+#header-title{
+  display: flex;
+  text-align: center;
+}
 
 #header-options div {
-  padding: 10px; 
+  padding: 10px;
 }
 
 .course-menu {
