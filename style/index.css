@@ -1,25 +1,33 @@
-#center-columns {
+#columns {
   display: grid;
   grid-template-columns: 24.5% 50% 24.5%;
   grid-gap: 0.5%;
   margin: 0.5%;
 }
 
-#center-columns div {
+.column {
   background-color: #2196F3;
   padding: 20px 0;
   font-size: 30px;
+}
+
+.column h2 {
+  text-align: center;
+  margin: 1%;
 }
 
 #header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: #2196F3;
+  margin: 0.5%;
 }
 
 #header-title {
   display: flex;
   margin-left: 0.5%;
+  text-align: center;
 }
 
 #header-options {
@@ -28,24 +36,15 @@
   margin-right: 0.5%;
 }
 
-#header {
-  display: flex;
-  background-color: #2196F3;
-  margin: 0.5%;
-}
-
-#header-title{
-  display: flex;
-  text-align: center;
-}
-
 #header-options div {
   padding: 10px;
 }
 
 .course-menu {
+  display: flex;
+  flex-direction: column;
   text-align: left;
-  padding: 5%;
+  margin: 5%;
 }
 
 .subject {
@@ -68,28 +67,41 @@
   margin: 1%;
 }
 
-.student {
-
+#student-list {
+  display: flex;
+  flex-direction: column;
 }
 
 .forum-message {
   display: flex;
+  background-color: cornsilk;
+  margin: 1%;
+}
+
+.forum-message div {
+  display: flex;
+  align-content: center;
+  margin: 1%;
 }
 
 .message-count::after {
-  content: "messages";
+  content: " mensajes";
 }
-/*# sourceMappingURL=index.css.map */
+
 .name::before{
-  content: "Name: ";
+  content: "Nombre: ";
 }
 
 .surname::before{
-  content: "Surname: ";
+  content: "Apellido: ";
 }
 
 .email::after{
   content: "@alumnos.uc3m.es";
+}
+
+table {
+  margin: 0 auto;
 }
 
 th, td {
