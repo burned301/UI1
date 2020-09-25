@@ -115,6 +115,39 @@
 
 
 
+  #col-center {
+    font-size: 30px;
+  }
+
+  .video {
+    width: 300px;
+    height: 225px;
+  }
+
+  .video-tema {
+    display: block;
+  }
+
+  #tablet-options {
+    display: block;
+  }
+
+}
+
+/*MOBILE*/
+@media (max-width: 549px){
+  body {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
 #header {
   display: flex;
   align-items: center;
