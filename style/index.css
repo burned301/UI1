@@ -30,6 +30,12 @@
   text-align: center;
 }
 
+#header-title a {
+  display: flex;
+  margin-left: 0.5%;
+  align-items: center;
+}
+
 #header-options {
   display: flex;
   background-color: turquoise;
