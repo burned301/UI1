@@ -92,6 +92,7 @@
 
 .message-count::after {
   content: " mensajes";
+  white-space: pre;
 }
 
 .name::before{
