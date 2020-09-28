@@ -1,3 +1,90 @@
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2196F3;
+  margin: 0.5%;
+}
+
+#header-title {
+  display: flex;
+  margin-left: 0.5%;
+  text-align: center;
+}
+
+#header-title a {
+  display: flex;
+  margin-left: 0.5%;
+  align-items: center;
+}
+
+#header-options {
+  display: flex;
+  background-color: turquoise;
+  margin-right: 0.5%;
+}
+
+#header-options div {
+  padding: 10px;
+}
+
+.course-menu {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.subject {
+  display: flex;
+  flex-direction: column;
+}
+
+.subject-title {
+  text-align: left;
+  padding: 10px;
+}
+
+#student-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.forum-message {
+  font-family: sans-serif;
+  background-color: lightgray;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 50% 20% 15% 12%;
+  grid-gap: 1%;
+  margin: 1%;
+  padding: 1%;
+}
+
+.forum-message div {
+  font-size: 1.25vw;
+  align-content: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.message-count::after {
+  content: " mensajes";
+  white-space: pre;
+}
+
+.name::before{
+  content: "Nombre: ";
+}
+
+.surname::before{
+  content: "Apellido: ";
+}
+
+.email::after{
+  content: "@alumnos.uc3m.es";
+}
+
 #columns {
   display: grid;
 }
@@ -28,17 +115,23 @@
   margin: 2%;
 }
 
-
 table {
+  font-family: sans-serif;
   margin: 0 auto;
+  font-size: 2vw;
+  background-color: white;
 }
 
-th, td {
-  padding: 15px;
+th {
+  background-color: lightgray;
+  padding: 5px;
+  text-align: center;
 }
 
 td {
-  text-align: center;
+  background-color: lightgray;
+  padding: 5px;
+  text-align: right;
 }
 
 .profile-pic {
@@ -88,7 +181,6 @@ td {
   }
 
 }
-
 
 /*TABLET */
 @media (min-width: 601px) and (max-width: 768px){
@@ -155,95 +247,3 @@ td {
     display: none;
   }
 }
-
-  .video-tema {
-    display: block;
-  }
-
-  #tablet-options {
-    display: block;
-  }
-
-
-#header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #2196F3;
-  margin: 0.5%;
-}
-
-#header-title {
-  display: flex;
-  margin-left: 0.5%;
-  text-align: center;
-}
-
-#header-title a {
-  display: flex;
-  margin-left: 0.5%;
-  align-items: center;
-}
-
-#header-options {
-  display: flex;
-  background-color: turquoise;
-  margin-right: 0.5%;
-}
-
-#header-options div {
-  padding: 10px;
-}
-
-.course-menu {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-
-.subject {
-  display: flex;
-  flex-direction: column;
-}
-
-.subject-title {
-  text-align: left;
-  padding: 10px;
-}
-
-#student-list {
-  display: flex;
-  flex-direction: column;
-}
-
-.forum-message {
-  display: flex;
-  background-color: cornsilk;
-  margin: 1%;
-}
-
-.forum-message div {
-  display: flex;
-  align-content: center;
-  margin: 1%;
-}
-
-.message-count::after {
-  content: " mensajes";
-  white-space: pre;
-}
-
-.name::before{
-  content: "Nombre: ";
-}
-
-.surname::before{
-  content: "Apellido: ";
-}
-
-.email::after{
-  content: "@alumnos.uc3m.es";
-}
-
-
-
