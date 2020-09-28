@@ -14,11 +14,36 @@
 }
 
 .image {
-  margin: 1%;
+  margin: 1% 2% 1% 2%;
+}
+
+.video {
+  width: 300px;
+  height: 225px;
+  margin: 1% 2% 1% 2%;
+}
+
+#col-center p {
+  font-size: 30px;
+  text-align: justify;
+  margin: 2%;
+}
+
+
+table {
+  margin: 0 auto;
+}
+
+th, td {
+  padding: 15px;
+}
+
+td {
+  text-align: right;
 }
 
 /*DESKTOP*/
-@media (min-width: 900px) {
+@media (min-width: 769px) {
   #columns {
     grid-template-columns: 24.5% 50% 24.5%;
     grid-gap: 0.5%;
@@ -33,6 +58,8 @@
     font-size: 40px;
   }
 
+
+
   #col-left {
     font-size: 30px;
   }
@@ -41,11 +68,6 @@
   }
   .image {
 
-  }
-
-  .video {
-    width: 420px;
-    height: 315px;
   }
 
   .video-tema {
@@ -64,7 +86,7 @@
 
 
 /*TABLET */
-@media (min-width: 550px) and (max-width: 899px){
+@media (min-width: 601px) and (max-width: 768px){
   #col-right {
     display: none;
   }
@@ -106,31 +128,20 @@
   .course-menu {
     justify-content: space-between;
     margin: 5% 5% 10% 5%;
+  }
+
+  table {
+    font-size: 20px;
+  }
 
 }
 
 /*MOBILE*/
-@media (max-width: 549px){
+@media (max-width: 600px){
   body {
     display: none;
   }
 }
-
-
-
-
-
-
-
-
-  #col-center {
-    font-size: 30px;
-  }
-
-  .video {
-    width: 300px;
-    height: 225px;
-  }
 
   .video-tema {
     display: block;
@@ -139,21 +150,6 @@
   #tablet-options {
     display: block;
   }
-
-}
-
-/*MOBILE*/
-@media (max-width: 549px){
-  body {
-    display: none;
-  }
-}
-
-
-
-
-
-
 
 
 #header {
@@ -197,17 +193,9 @@
   flex-direction: column;
 }
 
-
-
 .subject-title {
   text-align: left;
   padding: 10px;
-}
-
-
-
-.video {
-  margin: 1%;
 }
 
 #student-list {
@@ -244,15 +232,5 @@
   content: "@alumnos.uc3m.es";
 }
 
-table {
-  margin: 0 auto;
-}
 
-th, td {
-  padding: 15px;
-}
-
-td {
-  text-align: right;
-}
 
