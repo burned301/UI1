@@ -62,7 +62,6 @@
 }
 
 .forum-message div {
-  font-size: 1.25vw;
   align-content: center;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -86,6 +85,15 @@
   content: "@alumnos.uc3m.es";
 }
 
+#col-title-left{
+  text-align: left;
+}
+
+.column-title-secondary{
+  font-size: 1vw;
+  margin: 5%;
+}
+
 #columns {
   display: grid;
   height: 91.5vh;
@@ -96,14 +104,17 @@
   padding: 20px 0;
 }
 
-.column-title {
+#column-title-principal {
   font-weight: bolder;
   text-align: center;
   margin: 1%;
+  font-size: 3vw;
 }
 
 .image {
-  margin: 1% 2% 1% 2%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .video {
@@ -141,6 +152,13 @@ td {
   float: left;
 }
 
+.column-title-secondary {
+  text-align: center;
+  font-size: 2vw;
+  font-weight: bold;
+}
+
+
 /*DESKTOP*/
 @media (min-width: 769px) {
   #columns {
@@ -148,23 +166,21 @@ td {
     grid-gap: 0.5%;
     margin: 0.5%;
   }
-  .column-title{
-    font-size: 1.5em;
-    margin: 1%;
-  }
 
   #col-center {
-    font-size: 40px;
+    font-size: 2vw;
   }
 
   #col-left {
-    font-size: 30px;
+    font-size: 2vw;
   }
-  #col-title-left {
 
+  #column-title-principal {
+    font-size: 3vw;
   }
+
   .image {
-
+    width: 40vw;
   }
 
   .video-tema {
@@ -176,11 +192,20 @@ td {
   }
 
   .course-menu {
-    margin: 5% 5% 5% 5%;
+    margin: 5%;
   }
 
   .profile-pic {
-    width: 250px;
+    width: 12vw;
+  }
+
+  .message-pic {
+    width: 2vw;
+  }
+
+
+  .forum-message div {
+    font-size: 1.25vw;
   }
 
 }
@@ -191,8 +216,8 @@ td {
     display: none;
   }
 
-  #col-center p {
-    font-size: 20px;
+  #header-options {
+    display: none;
   }
 
   #columns {
@@ -201,19 +226,19 @@ td {
     margin: 0.5%;
   }
 
-  .column-title{
-    font-size: 50px;
-  }
-
   #col-title-left{
-    font-size: 20px;
+    font-size: 3vw;
     font-weight: bolder;
     text-align: center;
     margin: 1%;
   }
 
+  #column-title-principal {
+    font-size: 4.5vw;
+  }
+
   #col-center {
-    font-size: 30px;
+    font-size: 3vw;
   }
 
   .video {
@@ -238,15 +263,45 @@ td {
     font-size: 18px;
   }
 
+  .message-pic {
+    width: 4vw;
+  }
+
   .profile-pic {
-    width: 150px;
+    width: 20vw;
+  }
+
+  .image {
+    width: 60vw;
+  }
+
+  .forum-message div {
+    font-size: 2vw;
   }
 
 }
 
+.profile-pic {
+  margin: 2%;
+}
 /*MOBILE*/
 @media (max-width: 600px){
-  body {
+  #col-right {
     display: none;
   }
+
+  #header-options {
+    display: none;
+  }
+
+  #col-left {
+    display: none;
+  }
+
+  #columns {
+    grid-template-columns: 100%;
+    grid-gap: 0.5%;
+    margin: 0.5%;
+  }
+
 }
