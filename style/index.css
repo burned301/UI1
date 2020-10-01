@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   background-color: #2196F3;
-  margin:0.5%;
+  margin: 0.5%;
 
 }
 
@@ -169,6 +169,13 @@ td {
   text-align: center;
   font-size: 2vw;
   font-weight: bold;
+}
+
+a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
 }
 
 
@@ -353,13 +360,6 @@ td {
     margin-left: 5%;
   }
 
-  a{
-    display: inline-block;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-  }
-
   #dropdown-content {
     display: none;
     position: absolute;
@@ -404,7 +404,11 @@ td {
   }
 
   .forum-message {
-    grid-auto-flow: column;
+    grid-template-columns: auto auto;
+  }
+
+  .forum-message-info {
+    grid-column: 1 / 1;
   }
 
 }
