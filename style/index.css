@@ -55,11 +55,22 @@
   background-color: lightgray;
   display: grid;
   align-items: center;
-  grid-template-columns: 50% 20% 15% 12%;
+  grid-template-columns: 50% 49%;
   grid-gap: 1%;
   margin: 1%;
   padding: 1%;
 }
+
+.forum-message-info {
+  font-family: sans-serif;
+  background-color: lightgray;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 41% 31% 24%;
+  grid-gap: 2%;
+  padding: 1%;
+}
+
 
 .forum-message div {
   align-content: center;
@@ -392,5 +403,8 @@ td {
     font-size: 3vw;
   }
 
+  .forum-message {
+    grid-auto-flow: column;
+  }
 
 }
