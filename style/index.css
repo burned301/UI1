@@ -108,13 +108,16 @@
   font-weight: bolder;
   text-align: center;
   margin: 1%;
-  font-size: 3vw;
 }
 
-.image {
+.subject-image {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.profile-pic {
+  margin: 2%;
 }
 
 .video {
@@ -132,7 +135,6 @@
 table {
   font-family: sans-serif;
   margin: 0 auto;
-  font-size: 2vw;
   background-color: white;
 }
 
@@ -167,6 +169,10 @@ td {
     margin: 0.5%;
   }
 
+  #dropdown {
+    display: none;
+  }
+
   #col-center {
     font-size: 2vw;
   }
@@ -179,7 +185,7 @@ td {
     font-size: 3vw;
   }
 
-  .image {
+  .subject-image {
     width: 40vw;
   }
 
@@ -208,6 +214,10 @@ td {
     font-size: 1.25vw;
   }
 
+  table {
+    font-size: 2vw;
+  }
+
 }
 
 /*TABLET */
@@ -217,6 +227,10 @@ td {
   }
 
   #header-options {
+    display: none;
+  }
+
+  #dropdown {
     display: none;
   }
 
@@ -260,7 +274,7 @@ td {
   }
 
   table {
-    font-size: 18px;
+    font-size: 2vw;
   }
 
   .message-pic {
@@ -271,7 +285,7 @@ td {
     width: 20vw;
   }
 
-  .image {
+  .subject-image {
     width: 60vw;
   }
 
@@ -281,9 +295,7 @@ td {
 
 }
 
-.profile-pic {
-  margin: 2%;
-}
+
 /*MOBILE*/
 @media (max-width: 600px){
   #col-right {
@@ -294,8 +306,20 @@ td {
     display: none;
   }
 
+  #page-logo {
+    display: none;
+  }
+
   #col-left {
     display: none;
+  }
+
+  #header {
+    justify-content: normal;
+  }
+
+  #dropdown {
+    display: inline;
   }
 
   #columns {
@@ -303,5 +327,70 @@ td {
     grid-gap: 0.5%;
     margin: 0.5%;
   }
+
+  #col-center {
+    font-size: 5vw;
+  }
+
+  #column-title-principal {
+    font-size: 6vw;
+  }
+
+  #dropbtn {
+    width: 50px;
+    align-self: flex-start;
+    margin-left: 5%;
+  }
+
+  a{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  #dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  #dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  #dropdown-content a:hover {background-color: #f1f1f1;}
+
+  #dropdown:hover #dropdown-content {
+    display: block;
+  }
+  
+  .subject-image {
+    width: 80vw;
+  }
+
+  #student-list {
+    font-size: 4vw;
+  }
+
+  .message-pic {
+    width: 4vw;
+  }
+
+  .profile-pic {
+    width: 25vw;
+  }
+
+  table {
+    font-size: 3vw;
+  }
+
 
 }
