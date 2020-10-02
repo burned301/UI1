@@ -126,6 +126,11 @@
   display: flex;
 }
 
+.subject-content {
+  display: flex;
+  flex-direction: column;
+}
+
 .subject-image {
   margin-left: auto;
   margin-right: auto;
