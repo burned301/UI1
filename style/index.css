@@ -107,13 +107,15 @@
 }
 
 #columns {
-  display: grid;
-  height: 91.5vh;
+  display: flex;
+  min-height: 91.5vh;
+  margin: 0.25%;
 }
 
 .column {
   background-color: #2196F3;
   padding: 20px 0;
+  margin: 0.25%
 }
 
 #column-title-principal {
@@ -190,22 +192,22 @@ a {
 
 /*DESKTOP*/
 @media screen and (min-width: 769px) {
-  #columns {
-    grid-template-columns: 24.5% 50% 24.5%;
-    grid-gap: 0.5%;
-    margin: 0.5%;
-  }
-
   #dropdown {
     display: none;
   }
 
   #col-center {
-    font-size: 1.2vw;
+    width: 50%;
+    font-size: 2vw;
   }
 
   #col-left {
+    width: 24.5%;
     font-size: 2vw;
+  }
+
+  #col-right {
+    width: 24.5%;
   }
 
   #column-title-principal {
@@ -237,7 +239,6 @@ a {
     width: 2vw;
   }
 
-
   .forum-message div {
     font-size: 1.25vw;
   }
@@ -254,18 +255,21 @@ a {
     display: none;
   }
 
+  #col-left {
+    width: 19.5%;
+  }
+
+  #col-center {
+    width: 80%;
+    font-size: 3vw;
+  }
+
   #header-options {
     display: none;
   }
 
   #dropdown {
     display: none;
-  }
-
-  #columns {
-    grid-template-columns: 19.5% 80%;
-    grid-gap: 0.5%;
-    margin: 0.5%;
   }
 
   #col-title-left{
@@ -277,10 +281,6 @@ a {
 
   #column-title-principal {
     font-size: 4.5vw;
-  }
-
-  #col-center {
-    font-size: 3vw;
   }
 
   .video {
@@ -350,13 +350,8 @@ a {
     display: inline;
   }
 
-  #columns {
-    grid-template-columns: 100%;
-    grid-gap: 0.5%;
-    margin: 0.5%;
-  }
-
   #col-center {
+    width: 100%;
     font-size: 5vw;
   }
 
