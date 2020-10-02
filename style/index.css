@@ -1,3 +1,12 @@
+/* LINKS */
+a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* HEADER */
 #header {
   display: flex;
   align-items: center;
@@ -29,12 +38,46 @@
   padding: 10px;
 }
 
+
+/* GENERAL COLUMN STUFF */
+#columns {
+  display: flex;
+  min-height: 91.5vh;
+  margin: 0.25%;
+}
+
+.column {
+  background-color: #2196F3;
+  padding: 20px 0;
+  margin: 0.25%
+}
+
+#column-title-principal {
+  font-weight: bolder;
+  text-align: center;
+  margin: 1%;
+}
+
+.column-title-secondary{
+  font-size: 2vw;
+  margin: 5%;
+  font-weight: bold;
+  text-align: center;
+}
+
+#col-title-left{
+  text-align: left;
+}
+
+
+/* LEFT COLUMN MENU */
 .course-menu {
   display: flex;
   flex-direction: column;
   text-align: left;
 }
 
+/* INDEX.HTML CONTENT */
 .subject {
   display: flex;
   flex-direction: column;
@@ -43,14 +86,60 @@
 .subject-title {
   text-align: left;
   padding: 10px;
-  margin: 0%;
+  margin: 0;
 }
 
+.subject-intro {
+  display: flex;
+}
+
+.subject-content {
+  display: flex;
+  flex-direction: column;
+}
+
+#col-center p {
+  text-align: justify;
+  margin: 2%;
+}
+
+.subject-image {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.video {
+  width: 300px;
+  height: 225px;
+  margin: 1% 2% 1% 2%;
+}
+
+
+/* STUDENT-LIST.HTML CONTENT */
 #student-list {
   display: flex;
   flex-direction: column;
 }
 
+.name::before{
+  content: "Nombre: ";
+}
+
+.surname::before{
+  content: "Apellido: ";
+}
+
+.email::after{
+  content: "@alumnos.uc3m.es";
+}
+
+.profile-pic {
+  margin: 2%;
+  float: left;
+}
+
+
+/* SUBJECT-FORUM.HTML CONTENT */
 .forum-message {
   font-family: sans-serif;
   background-color: lightgray;
@@ -72,7 +161,6 @@
   padding: 1%;
 }
 
-
 .forum-message div {
   align-content: center;
   white-space: nowrap;
@@ -85,75 +173,8 @@
   white-space: pre;
 }
 
-.name::before{
-  content: "Nombre: ";
-}
 
-.surname::before{
-  content: "Apellido: ";
-}
-
-.email::after{
-  content: "@alumnos.uc3m.es";
-}
-
-#col-title-left{
-  text-align: left;
-}
-
-.column-title-secondary{
-  font-size: 1vw;
-  margin: 5%;
-}
-
-#columns {
-  display: flex;
-  min-height: 91.5vh;
-  margin: 0.25%;
-}
-
-.column {
-  background-color: #2196F3;
-  padding: 20px 0;
-  margin: 0.25%
-}
-
-#column-title-principal {
-  font-weight: bolder;
-  text-align: center;
-  margin: 1%;
-}
-
-.subject-intro {
-  display: flex;
-}
-
-.subject-content {
-  display: flex;
-  flex-direction: column;
-}
-
-.subject-image {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.profile-pic {
-  margin: 2%;
-}
-
-.video {
-  width: 300px;
-  height: 225px;
-  margin: 1% 2% 1% 2%;
-}
-
-#col-center p {
-  text-align: justify;
-  margin: 2%;
-}
-
-
+/* STUDENT-GRADES.HTML CONTENT */
 table {
   font-family: sans-serif;
   margin: 0 auto;
@@ -172,30 +193,17 @@ td {
   text-align: right;
 }
 
-.profile-pic {
-  float: left;
-}
 
-.column-title-secondary {
-  text-align: center;
-  font-size: 2vw;
-  font-weight: bold;
-}
-
-a {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-}
-
-
-/*DESKTOP*/
+/* DESKTOP */
 @media screen and (min-width: 769px) {
+
+  /* HEADER */
   #dropdown {
     display: none;
   }
 
+
+  /* GENERAL COLUMN STUFF */
   #col-center {
     width: 50%;
     font-size: 2vw;
@@ -214,6 +222,18 @@ a {
     font-size: 3vw;
   }
 
+
+  /* LEFT COLUMN MENU */
+  #tablet-options {
+    display: none;
+  }
+
+  .course-menu {
+    margin: 5%;
+  }
+
+
+  /* INDEX.HTML CONTENT */
   .subject-image {
     display: block;
     width: 20vw;
@@ -223,14 +243,8 @@ a {
     display: flex;
   }
 
-  #tablet-options {
-    display: none;
-  }
 
-  .course-menu {
-    margin: 5%;
-  }
-
+  /* STUDENT-LIST.HTML CONTENT */
   .profile-pic {
     width: 12vw;
   }
@@ -239,18 +253,31 @@ a {
     width: 2vw;
   }
 
+  /* SUBJECT-FORUM.HTML CONTENT */
   .forum-message div {
     font-size: 1.25vw;
   }
 
+  /* STUDENT-GRADES.HTML CONTENT */
   table {
     font-size: 2vw;
   }
-
 }
 
-/*TABLET */
-@media screen and (min-width: 601px) and (max-width: 768px){
+/* TABLET */
+@media screen and (min-width: 601px) and (max-width: 768px) {
+
+  /* HEADER */
+  #dropdown {
+    display: none;
+  }
+
+  #header-options {
+    display: none;
+  }
+
+
+  /* GENERAL COLUMN STUFF */
   #col-right {
     display: none;
   }
@@ -264,12 +291,8 @@ a {
     font-size: 3vw;
   }
 
-  #header-options {
-    display: none;
-  }
-
-  #dropdown {
-    display: none;
+  #column-title-principal {
+    font-size: 4.5vw;
   }
 
   #col-title-left{
@@ -279,8 +302,20 @@ a {
     margin: 1%;
   }
 
-  #column-title-principal {
-    font-size: 4.5vw;
+  /* LEFT COLUMN MENU */
+  #tablet-options {
+    display: block;
+  }
+
+  .course-menu {
+    justify-content: space-between;
+    margin: 5% 5% 10% 5%;
+  }
+
+
+  /* INDEX.HTML CONTENT */
+  .subject-image {
+    display: none;
   }
 
   .video {
@@ -292,75 +327,36 @@ a {
     display: block;
   }
 
-  #tablet-options {
-    display: block;
-  }
 
-  .course-menu {
-    justify-content: space-between;
-    margin: 5% 5% 10% 5%;
-  }
-
-  table {
-    font-size: 2vw;
+  /* STUDENT-LIST.HTML CONTENT */
+  .profile-pic {
+    width: 20vw;
   }
 
   .message-pic {
     width: 4vw;
   }
 
-  .profile-pic {
-    width: 20vw;
-  }
 
-  .subject-image {
-    display: none;
-  }
-
+  /* SUBJECT-FORUM.HTML CONTENT */
   .forum-message div {
     font-size: 2vw;
   }
 
+
+  /* STUDENT-GRADES.HTML CONTENT */
+  table {
+    font-size: 2vw;
+  }
 }
 
 
 /*MOBILE*/
 @media screen and (max-width: 600px){
-  #col-right {
-    display: none;
-  }
 
-  #header-options {
-    display: none;
-  }
-
-  #page-logo {
-    display: none;
-  }
-
-  #col-left {
-    display: none;
-  }
-
-  #header {
-    justify-content: normal;
-  }
-
+  /* HEADER */
   #dropdown {
     display: inline;
-  }
-
-  #col-center {
-    width: 100%;
-    font-size: 5vw;
-  }
-
-  #column-title-principal {
-    font-size: 6vw;
-  }
-
-  .subject-intro p {
-    display: none;
   }
 
   #dropbtn {
@@ -392,26 +388,65 @@ a {
     display: block;
   }
 
+  #header-options {
+    display: none;
+  }
+
+  #page-logo {
+    display: none;
+  }
+
+  #header {
+    justify-content: normal;
+  }
+
+
+  /* GENERAL COLUMN STUFF */
+  #col-right {
+    display: none;
+  }
+
+  #col-left {
+    display: none;
+  }
+
+  #col-center {
+    width: 100%;
+    font-size: 5vw;
+  }
+
+  #column-title-principal {
+    font-size: 6vw;
+  }
+
+
+  /* INDEX.HTML CONTENT */
+  .subject-intro p {
+    display: none;
+  }
+
   .subject-image {
     display: none;
   }
 
+
+  /* STUDENT-LIST.HTML CONTENT */
   #student-list {
     font-size: 4vw;
-  }
-
-  .message-pic {
-    width: 4vw;
   }
 
   .profile-pic {
     width: 25vw;
   }
 
-  table {
-    font-size: 3vw;
+
+  /* STUDENT-LIST.HTML CONTENT */
+  .message-pic {
+    width: 4vw;
   }
 
+
+  /* SUBJECT-FORUM.HTML CONTENT */
   .forum-message {
     grid-template-columns: auto auto;
   }
@@ -420,4 +455,9 @@ a {
     grid-column: 1 / 1;
   }
 
+
+  /* STUDENT-GRADES.HTML CONTENT */
+  table {
+    font-size: 3vw;
+  }
 }
