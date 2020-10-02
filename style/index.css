@@ -91,6 +91,7 @@ a {
 
 .subject-intro {
   display: flex;
+  margin: 2%;
 }
 
 .subject-content {
