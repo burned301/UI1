@@ -43,6 +43,7 @@
 .subject-title {
   text-align: left;
   padding: 10px;
+  margin: 0%;
 }
 
 #student-list {
@@ -123,8 +124,11 @@
   margin: 1%;
 }
 
+.subject-intro {
+  display: flex;
+}
+
 .subject-image {
-  display: block;
   margin-left: auto;
   margin-right: auto;
 }
@@ -206,7 +210,8 @@ a {
   }
 
   .subject-image {
-    width: 40vw;
+    display: block;
+    width: 20vw;
   }
 
   .video-tema {
@@ -304,7 +309,7 @@ a {
   }
 
   .subject-image {
-    width: 60vw;
+    display: none;
   }
 
   .forum-message div {
@@ -349,6 +354,10 @@ a {
     font-size: 6vw;
   }
 
+  .subject-intro p {
+    display: none;
+  }
+
   #dropbtn {
     width: 50px;
     align-self: flex-start;
@@ -377,9 +386,9 @@ a {
   #dropdown:hover #dropdown-content {
     display: block;
   }
-  
+
   .subject-image {
-    width: 80vw;
+    display: none;
   }
 
   #student-list {
