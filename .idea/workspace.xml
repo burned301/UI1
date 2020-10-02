@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d68741c8-9802-4150-9645-1abe21cf4bb9" name="Default Changelist" comment="fixed alt for dropdown menu">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/index.css" afterDir="false" />
-    </list>
+    <list default="true" id="d68741c8-9802-4150-9645-1abe21cf4bb9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,6 +32,14 @@
       <updated>1601564868202</updated>
       <workItem from="1601564876154" duration="686000" />
     </task>
+    <task id="LOCAL-00001" summary="changed page from grid to flex">
+      <created>1601649154854</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1601649154854</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -43,10 +48,30 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="changed page from grid to flex" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed page from grid to flex" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="506" y="105" key="CommitChangelistDialog2" timestamp="1601649153842">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="506" y="105" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1601649153842" />
+    <state x="184" y="86" key="MergeDialog" timestamp="1601649281036">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="184" y="86" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601649281036" />
+    <state x="598" y="281" key="MultipleFileMergeDialog" timestamp="1601649281042">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="598" y="281" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601649281042" />
     <state x="642" y="222" key="RollbackChangesDialog" timestamp="1601648444482">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="642" y="222" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601648444482" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1601649294410">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601649294410" />
   </component>
 </project>
