@@ -274,9 +274,17 @@ a {
     margin: 5%;
   }
 
+  #col-right p {
+    font-size: 1.2vw;
+    margin: 3%;
+  }
 
   /* INDEX.HTML CONTENT */
   .subject p {
+    font-size: 1.2vw;
+  }
+
+  .subject h4 {
     font-size: 2vw;
   }
 
@@ -300,6 +308,9 @@ a {
     width: 2vw;
   }
 
+  .student p {
+    font-size: 2vw;
+  }
 
   /* SUBJECT-FORUM.HTML CONTENT */
   .forum-message div {
@@ -429,6 +440,9 @@ a {
     width: 4vw;
   }
 
+  .student p {
+    font-size: 3vw;
+  }
 
   /* SUBJECT-FORUM.HTML CONTENT */
   .forum-message div {

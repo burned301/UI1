@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d68741c8-9802-4150-9645-1abe21cf4bb9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/subject1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/subject1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/student-grades.html" beforeDir="false" afterPath="$PROJECT_DIR$/student-grades.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/student-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/student-list.html" afterDir="false" />
@@ -45,6 +44,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
