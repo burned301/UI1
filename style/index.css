@@ -85,13 +85,12 @@ a {
 
 .subject-title {
   text-align: left;
-  padding: 10px;
+  padding: 0px 10px 10px 10px;
   margin: 0;
 }
 
 .subject-intro {
   display: flex;
-  margin: 2%;
 }
 
 .subject-content {
@@ -106,7 +105,6 @@ a {
 
 .video-content {
   text-align: justify;
-  margin: 1% 2% 1% 1%;
 }
 
 .subject-image {
@@ -284,8 +282,12 @@ a {
     font-size: 1.2vw;
   }
 
-  .subject h4 {
+  .subject-title {
     font-size: 2vw;
+  }
+
+  .subject-intro {
+    margin: 2%;
   }
 
   .subject-image {
@@ -295,6 +297,10 @@ a {
 
   .subject-video p {
     margin-top: 0;
+  }
+
+  .video-content {
+    margin: 1% 2% 1% 1%;
   }
 
   .video {
@@ -415,6 +421,11 @@ a {
 
 
   /* INDEX.HTML CONTENT */
+  .subject-title {
+    font-size: 4vw;
+    margin-top: 3%;
+  }
+
   .subject p {
     font-size: 3vw;
   }
@@ -434,6 +445,9 @@ a {
     flex-direction: column-reverse;
   }
 
+  .video-content {
+    margin: 1% 2% 1% 2%;
+  }
 
   /* STUDENT-LIST.HTML CONTENT */
   .profile-pic {
@@ -542,6 +556,11 @@ a {
 
 
   /* INDEX.HTML CONTENT */
+  .subject-title {
+    font-size: 6vw;
+    margin-top: 3%;
+  }
+
   .subject p {
     font-size: 5vw;
   }
@@ -556,6 +575,10 @@ a {
 
   .subject-video {
     flex-direction: column-reverse;
+  }
+
+  .video-content {
+    margin-left: 10px;
   }
 
   .video-description {
