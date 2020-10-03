@@ -283,6 +283,7 @@ a {
   .subject-image {
     display: block;
     width: 20vw;
+    height: 15vw;
   }
 
   .video {
