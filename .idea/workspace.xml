@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d68741c8-9802-4150-9645-1abe21cf4bb9" name="Default Changelist" comment="" />
+    <list default="true" id="1295964f-6fd6-4b33-8970-a3606eabde27" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ej/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ej/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +42,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -47,7 +53,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d68741c8-9802-4150-9645-1abe21cf4bb9" name="Default Changelist" comment="" />
+      <changelist id="1295964f-6fd6-4b33-8970-a3606eabde27" name="Default Changelist" comment="" />
       <created>1601564868202</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -55,6 +61,8 @@
       <workItem from="1601564876154" duration="686000" />
       <workItem from="1601654859543" duration="26000" />
       <workItem from="1601717654650" duration="12165000" />
+      <workItem from="1602004235028" duration="74000" />
+      <workItem from="1602156684670" duration="2245000" />
     </task>
     <task id="LOCAL-00001" summary="changed page from grid to flex">
       <created>1601649154854</created>
@@ -135,10 +143,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601652276500" />
-    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1601736406958">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="740" y="291" width="424" height="491" key="FileChooserDialogImpl" timestamp="1602169920970">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601736406958" />
+    <state x="740" y="291" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1600.900@0.27.1920.1053" timestamp="1602169920970" />
     <state x="184" y="86" key="MergeDialog" timestamp="1601649281036">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
