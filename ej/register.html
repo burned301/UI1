@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>Estructuras de Datos y Algoritmos</title>
+        <link rel="stylesheet" href="style/index.css">
+        <script src="scripts/register.js"></script>
+    </head>
+    <body>
+        <form name="register" onsubmit="">
+            <div>Nombre de usuario</div>
+            <input type="text" name="username" placeholder="Nombre de usuario">
+
+            <div>NIA</div>
+            <input type="number" name="nia" placeholder="NIA">
+
+            <div>Contraseña</div>
+            <input type="password" name="password" placeholder="Contraseña">
+
+            <div>Nombre y Apellidos</div>
+            <input type="text" name="name" placeholder="Nombre y Apellidos">
+
+            <div>Email</div>
+            <input type="email" name="email" placeholder="nombre@dominio.extensión">
+
+            <div>Fecha de nacimiento</div>
+            <input type="date" name="birthdate" >
+
+            <div>Documento de Identificación</div>
+            <input type="text" name="dni" placeholder="Documento de Identificación">
+
+            <div>Rol</div>
+            <select id="rol" name="rol" onchange="isStudent()">
+                <option value="Administrador">Administrador</option>
+                <option value="Profesor">Profesor</option>
+                <option value="Estudiante">Estudiante</option>
+            </select>
+
+
+
+            <div id="student">
+                <div>Grado</div>
+                <select name="degree">
+                    <option value="cs">Grado en Ingeniería Informática</option>
+                    <option value="law">Grado en Derecho</option>
+                    <option value="industrial">Grado en Ingeniería Industrial</option>
+                </select>
+            </div>
+
+            <div>Universidad</div>
+            <input value="Universidad Carlos III de Madrid" readonly>
+
+            <div>Idioma</div>
+            <select name="language">
+                <option value="spa">Español</option>
+                <option value="en">Inglés</option>
+                <option value="">Italiano</option>
+            </select>
+            <button type="submit">Regístrate</button>
+        </form>
+    </body>
+</html>

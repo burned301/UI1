@@ -1,14 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
     showSection("subjects");
+    document.querySelector('#form').addEventListener('onsubmit',showSection);
 });
 
-function showSection(section){
 
+
+
+
+function showSection(section){
     const subjects = document.querySelector('#subjects');
     const students_grades = document.querySelector('#students-grades');
     const student_list = document.querySelector('#students-list');
     const subject_forum = document.querySelector('#subject-forum');
-
 
     switch (section){
         case "subjects":
