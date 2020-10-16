@@ -4,10 +4,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 function register(){
+
+    document.querySelectorAll('.error').forEach(error =>{
+        console.log(error);
+        error.innerHTML = "";
+    });
+
+
+
     const form = document.forms['register'];
 
     const username = form['username'];
-
+    return false;
 }
 
 
