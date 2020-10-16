@@ -52,7 +52,7 @@ header {
   margin: 0.25%
 }
 
-#column-title-principal {
+.column-title-principal {
   font-weight: bolder;
   text-align: center;
   margin: 1% 1% 5% 1%;
@@ -121,8 +121,8 @@ header {
 }
 
 
-/* STUDENT-LIST.HTML CONTENT */
-#student-list {
+/* students-list.HTML CONTENT */
+#students-list {
   display: flex;
   flex-direction: column;
 }
@@ -258,7 +258,7 @@ footer {
     width: 24.5%;
   }
 
-  #column-title-principal {
+  .column-title-principal {
     font-size: 3vw;
   }
 
@@ -310,7 +310,7 @@ footer {
   }
 
 
-  /* STUDENT-LIST.HTML CONTENT */
+  /* students-list.HTML CONTENT */
   .profile-pic {
     width: 12vw;
   }
@@ -404,7 +404,7 @@ footer {
     width: 80%;
   }
 
-  #column-title-principal {
+  .column-title-principal {
     font-size: 4.5vw;
   }
 
@@ -453,7 +453,7 @@ footer {
     margin: 1% 2% 1% 2%;
   }
 
-  /* STUDENT-LIST.HTML CONTENT */
+  /* students-list.HTML CONTENT */
   .profile-pic {
     width: 20vw;
   }
@@ -554,7 +554,7 @@ footer {
     width: 99.5%;
   }
 
-  #column-title-principal {
+  .column-title-principal {
     font-size: 6vw;
   }
 
@@ -597,8 +597,8 @@ footer {
   }
 
 
-  /* STUDENT-LIST.HTML CONTENT */
-  #student-list {
+  /* students-list.HTML CONTENT */
+  #students-list {
     font-size: 4vw;
   }
 
