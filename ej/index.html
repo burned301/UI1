@@ -12,16 +12,16 @@
             <div id="dropdown">
                 <img src="images/menu.png" id="dropbtn" alt="menu">
                 <div id="dropdown-content">
-                    <a class="course-menu" href="students-list.html">Listado de estudiantes</a>
-                    <a class="course-menu" href="subject-forum.html">Foro de la asignatura</a>
-                    <a class="course-menu" href="student-grades.html">Calificaciones</a>
-                    <a class="course-menu" href="#">Novedades</a>
-                    <a class="course-menu" href="#">Eventos</a>
+                    <div class="course-menu" onclick="showSection('students-list')">Listado de estudiantes</div>
+                    <div class="course-menu" onclick="showSection('students-forum')">Foro de la asignatura</div>
+                    <div class="course-menu" onclick="showSection('students-grades')">Calificaciones</div>
+                    <div class="course-menu" onclick="showSection('subjects')">Novedades</div>
+                    <div class="course-menu" onclick="showSection('subjects')">Eventos</div>
                 </div>
             </div>
             <div id="header-title">
-                <a  href=""><img id="page-logo" src="images/gestia3.png" alt="logo" width="50"></a>
-                <a  href="">Estructuras de Datos y Algoritmos</a>
+                <a  onclick="showSection('subjects')" href=""><img id="page-logo" src="images/gestia3.png" alt="logo" width="50"></a>
+                <a  onclick="showSection('subjects')" href="">Estructuras de Datos y Algoritmos</a>
             </div>
             <div id="header-options">
                 <div><a href="#">Calendario</a></div>
@@ -32,7 +32,7 @@
         </header>
         <div id="columns">
             <div id="col-left" class="column">
-                <div id="col-title-left" class="column-title-secondary">Estructuras de Datos y Algoritmos</div>
+                <div id="col-title-left" class="column-title-secondary course-menu" onclick="showSection('subjects')">Estructuras de Datos y Algoritmos</div>
                 <div class="course-menu" onclick="showSection('students-list')"  >Listado de estudiantes</div>
                 <div class="course-menu" onclick="showSection('subject-forum')"  >Foro de la asignatura</div>
                 <div class="course-menu" onclick="showSection('students-grades')">Calificaciones</div>
