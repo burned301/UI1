@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
     showSection("subjects");
 });
 
@@ -46,3 +46,4 @@ function showSection(section){
 
     return false;
 }
+
