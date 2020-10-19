@@ -1,6 +1,6 @@
 
 function validateLoginForm() {
-    const email = document.forms['login']['email'].value
+    const email = document.forms['login']['user'].value
     const password = document.forms['login']['password'].value
     const userCredentials = getCookie(email)
     if (userCredentials !== '') {
@@ -8,7 +8,7 @@ function validateLoginForm() {
             window.location.href = 'index.html'
         }
     } else {
-        /* TODO INSERT ERROR MESSAGE */
+        document.getElementById('login-error').style.display = 'flex'
     }
     return false
 }

@@ -3,10 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#form').addEventListener('onsubmit',showSection);
 });
 
-
-
-
-
 function showSection(section){
     const subjects = document.querySelector('#subjects');
     const students_grades = document.querySelector('#students-grades');
