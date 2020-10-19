@@ -8,7 +8,7 @@ function validateLoginForm() {
             window.location.href = 'index.html'
         }
     } else {
-        document.getElementById('login-error').style.display = 'flex'
+        document.querySelectorAll('#login-error').style.display = 'flex'
     }
     return false
 }
