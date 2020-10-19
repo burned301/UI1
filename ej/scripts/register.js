@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('#form-submit').addEventListener('click', register);
     studentForm(false);
 });
 
@@ -9,29 +10,10 @@ function register(){
         error.innerHTML = "";
     });
 
-    const form = document.forms['register'];
-    const mandatoryField = 'Campo obligatorio';
-
-    const username = form['username'];
-    const nia = form['nia'];
-    const pswd = form['password'];
-    const name = form['name'];
-    const email = form['email'];
-    //const
-
-
-
-    /*
-    if(!username.checkValidity()) document.querySelector('#username-error').innerHTML = username.validationMessage;
-    if(|username.c)
-    */
-
-
     document.querySelectorAll('input').forEach( input =>{
         if(!input.checkValidity()) {
             const name = input.getAttribute('name');
-            let query = `#${name}-error`;
-            document.querySelector(query) = input.validationMessage;
+            document.querySelector(`#${name}-error`).innerHTML = input.validationMessage;
         }
     })
 
