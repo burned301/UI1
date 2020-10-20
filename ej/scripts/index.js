@@ -1,7 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     showSection("subjects");
-    document.querySelector('#form').addEventListener('onsubmit',showSection);
+    document.querySelectorAll('.message-pic').forEach( user => {
+        user.addEventListener('click',sendMail("","",""));
+    })
 });
+
+
+function sendMail(to,subject,message){
+    window.location.href = `mailto:${to}?subject=${subject}&body=${message}%20goes%20here`;
+}
 
 function showSection(section){
     const subjects = document.querySelector('#subjects');
