@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     studentForm(false);
 });
 
+//pattern="(100)(\d){6}"
 
 function register(){
 
