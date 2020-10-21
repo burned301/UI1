@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     showSection("subjects");
-    document.querySelectorAll('.message-pic').forEach( user => {
-        user.addEventListener('click',sendMail("","",""));
+    document.querySelectorAll('.message-pic').forEach( image => {
+        image.addEventListener('click',sendMail);
     })
 });
 

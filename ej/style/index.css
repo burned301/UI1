@@ -149,6 +149,10 @@ header {
   float: left;
 }
 
+.message-pic{
+  cursor: pointer;
+}
+
 
 /* SUBJECT-FORUM.HTML CONTENT */
 .forum-message {
