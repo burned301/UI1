@@ -5,40 +5,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //pattern="(\d){9}" oninvalid="setCustomValidity('Introduzca los 9 dígitos de su NIA')"
 
+
 function register(){
-    const valid = true;
-    let cookie = '{';
+    let valid = true;
+    let user = {};
     document.querySelectorAll('.error').forEach(error =>{
         error.innerHTML = "";
     });
 
     document.querySelectorAll('input').forEach( input =>{
         const name = input.getAttribute('name');
-        cookie += `${name}:${input.value},`;
-        if(!input.checkValidity()) {
-            document.querySelector(`#${name}-error`).innerHTML = input.validationMessage;
+        const regex = new RegExp(input.getAttribute('data-pattern'));
+        if(!regex.test(input.value)){
+            valid = false;
+            document.querySelector(`#${name}-error`).innerHTML = input.getAttribute('data-error') ;
         }
-
-    })
-    cookie += `rol:${getRol()},`
-    cookie += `language:${getLanguage()}}`
-    //if(valid) setCookie(JSON.parse(cookie),1);
+        user[`${name}`] = `${input.value}`;
+    });
+    user["rol"] = getRol();
+    user["language"] = getLanguage();
+    if(valid && getUser(user.email) !== null) {
+        addUser(user);
+    }else {
+        alert("email")
+    }
     return false;
-}
-
-function setCookie(cookie, exdays) {
-    alert(cookie);
-    alert(JSON.stringify(cookie));
-    var d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    var expires = "expires="+ d.toUTCString();
-    document.cookie = "mycookie="+JSON.stringify(cookie) +";"+ expires + ";path=/";
 }
 
 function getRol(){
     return getSelect("#rol");
 }
-
 
 function getLanguage(){
     return getSelect("#language");
@@ -52,8 +48,6 @@ function getSelect(query){
 function isStudent(){
     studentForm(getRol() === "Estudiante");
 }
-
-
 
 function studentForm(isStudent){
     const studentForm = document.querySelector('#student');

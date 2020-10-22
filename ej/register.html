@@ -6,18 +6,19 @@
         <title>Estructuras de Datos y Algoritmos</title>
         <link rel="stylesheet" href="style/login.css">
         <script src="scripts/register.js"></script>
+        <script src="scripts/cookieManagement.js"></script>
     </head>
     <body>
         <div id="register">
-            <form name="register" id="register-form" lang="es">
+            <form name="register" id="register-form" lang="es" onsubmit="return false">
                 <label for="username">Nombre de usuario</label>
                 <div id="username-error" class="error"></div>
-                <input id="username"  type="text" name="username" placeholder="Nombre de usuario">
+                <input id="username"  type="text" name="username" data-pattern="" placeholder="Nombre de usuario">
                 <!--pattern="[a-zA-Z0-9]+" oninvalid="setCustomValidity('Introduzca su nombre de usuario. Solo caracteres alfanuméricos')"-->
 
                 <label for="nia">NIA</label>
                 <div id="nia-error" class="error"></div>
-                <input id="nia"  type="text" name="nia" placeholder="NIA" value="" pattern="(\d){9}" oninvalid="setCustomValidity('Introduzca los 9 dígitos de su NIA')">
+                <input id="nia"  type="text" name="nia" placeholder="NIA" value="" data-pattern="(\d){9}" data-error="Introduzca los 9 dígitos de su NIA">
 
                 <label for="pswd">Contraseña</label>
                 <div id="pswd-error" class="error"></div>
@@ -58,6 +59,7 @@
                 </div>
 
                 <label for="uni">Universidad</label>
+                <div id="uni-error" class="error"></div>
                 <input id="uni"  name="uni" value="Universidad Carlos III de Madrid" disabled>
 
                 <label for="language">Idioma</label>
