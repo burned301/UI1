@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function getUser(email){
     const users = getUsers();
-    console.log(users);
     let result = null
     users.forEach(user => {
         if(user.email === email) {
@@ -16,7 +15,6 @@ function getUser(email){
 
 function getUsers(){
     const users = getCookie("db");
-    console.log(users);
     if(users === null) return null;
     return JSON.parse(users)["users"];
 }
@@ -49,7 +47,6 @@ function getCookie(cname) {
     const name = cname + '=';
     const decodedCookie = decodeURIComponent(document.cookie);
     const ca = decodedCookie.split(';');
-    console.log(decodedCookie);
     for (let i = 0; i < ca.length; i++) {
         let c = ca[i];
         if (c.trim().indexOf(name) === 0) {
