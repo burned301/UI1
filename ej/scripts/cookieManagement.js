@@ -4,14 +4,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function getUser(email){
     const users = getUsers();
+    console.log(users);
+    let result = null
     users.forEach(user => {
-        if(user.email === email) return user;
+        if(user.email === email) {
+            result = user;
+        }
     })
-    return null;
+    return result;
 }
 
 function getUsers(){
-    const users = getCookie("users");
+    const users = getCookie("db");
+    console.log(users);
     if(users === null) return null;
     return JSON.parse(users)["users"];
 }
@@ -20,13 +25,16 @@ function createUserDB(){
     const cookie = {
         users: []
     };
-    setCookie(cookie, "users", 10);
+    setCookie(cookie, "db", 10);
 }
 
 function addUser(user){
     const users = getUsers();
     users.push(user);
-    setCookie(users, "users", 10);
+    const db = {
+        "users" : users
+    }
+    setCookie(db, "db", 10);
 }
 
 
@@ -41,6 +49,7 @@ function getCookie(cname) {
     const name = cname + '=';
     const decodedCookie = decodeURIComponent(document.cookie);
     const ca = decodedCookie.split(';');
+    console.log(decodedCookie);
     for (let i = 0; i < ca.length; i++) {
         let c = ca[i];
         if (c.trim().indexOf(name) === 0) {
