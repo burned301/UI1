@@ -1,18 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
-    if(getCookie("users") === "") createUserDB();
+    if(getUsers() === null) createUserDB();
 });
 
 function getUser(email){
-    const user = getUsers();
-
-    user.forEach(user => {
+    const users = getUsers();
+    users.forEach(user => {
         if(user.email === email) return user;
     })
     return null;
 }
 
 function getUsers(){
-    const users = JSON.parse(getCookie("users"))["users"];
+    const users = getCookie("users");
+    if(users === null) return null;
+    return JSON.parse(users)["users"];
 }
 
 function createUserDB(){
@@ -43,8 +44,8 @@ function getCookie(cname) {
     for (let i = 0; i < ca.length; i++) {
         let c = ca[i];
         if (c.trim().indexOf(name) === 0) {
-            return c.substring(name.length +1, c.length);
+            return c.substring(name.length, c.length);
         }
     }
-    return '';
+    return null;
 }

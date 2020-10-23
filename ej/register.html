@@ -13,7 +13,7 @@
             <form name="register" id="register-form" lang="es" onsubmit="return false">
                 <label for="username">Nombre de usuario</label>
                 <div id="username-error" class="error"></div>
-                <input id="username"  type="text" name="username" data-pattern="" placeholder="Nombre de usuario">
+                <input id="username"  type="text" name="username" data-pattern="[a-zA-Z0-9]+" data-error="Introduzca su nombre de usuario. Solo números y letras." placeholder="Nombre de usuario">
                 <!--pattern="[a-zA-Z0-9]+" oninvalid="setCustomValidity('Introduzca su nombre de usuario. Solo caracteres alfanuméricos')"-->
 
                 <label for="nia">NIA</label>
@@ -22,23 +22,23 @@
 
                 <label for="pswd">Contraseña</label>
                 <div id="pswd-error" class="error"></div>
-                <input id="pswd"  type="password" name="pswd" placeholder="Contraseña" >
+                <input id="pswd"  type="password" name="pswd" data-pattern=".{4,}" data-error="Introduzca una contraseña de al menos 4 caracteres" placeholder="Contraseña" >
 
                 <label for="name">Nombre y Apellidos</label>
                 <div id="name-error" class="error"></div>
-                <input id="name"  type="text" name="name" placeholder="Nombre y Apellidos" >
+                <input id="name"  type="text" name="name" data-pattern=".+" data-error="Introduzca su nombre y apellidos" placeholder="Nombre y Apellidos" >
 
                 <label for="email">Email</label>
                 <div id="email-error" class="error"></div>
-                <input id="email"  type="email" name="email" placeholder="nombre@dominio.extensión" >
+                <input id="email"  type="email" name="email" data-pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*" data-error="Introduzca su correo siguiendo el formato nombre@dominio.com" placeholder="nombre@dominio.extensión" >
 
                 <label for="birthdate">Fecha de nacimiento</label>
                 <div id="birthdate-error" class="error"></div>
-                <input id="birthdate"  type="date" name="birthdate" >
+                <input id="birthdate"  data-pattern="(\d){4}(-)(\d){2}(-)(\d){2}" data-error="Introduzca su fecha de nacimiento" type="date" name="birthdate" >
 
                 <label for="dni">Documento de Identificación</label>
                 <div id="dni-error" class="error"></div>
-                <input id="dni"  type="text" name="dni" placeholder="Documento de Identificación" >
+                <input id="dni"  type="text" data-pattern="([0-9]){8}([TRWAGMYFPDXBNJZSQVHLCKE])" data-error="Introduzca su DNI" name="dni" placeholder="Documento de Identificación" >
 
                 <label for="rol">Rol</label>
                 <div id="rol-error" class="error"></div>
@@ -60,7 +60,7 @@
 
                 <label for="uni">Universidad</label>
                 <div id="uni-error" class="error"></div>
-                <input id="uni"  name="uni" value="Universidad Carlos III de Madrid" disabled>
+                <input id="uni"  name="uni" data-pattern=".+" data-error="Introduzca su universidad" value="Universidad Carlos III de Madrid" disabled>
 
                 <label for="language">Idioma</label>
                 <div id="language-error" class="error"></div>

@@ -24,10 +24,12 @@ function register(){
     });
     user["rol"] = getRol();
     user["language"] = getLanguage();
-    if(valid && getUser(user.email) !== null) {
-        addUser(user);
-    }else {
-        alert("email")
+    if(valid) {
+        if(getUser(user.email) === null){
+            addUser(user);
+        }else {
+            document.querySelector("#email-error").innerHTML = "Email ya en uso, por favor introduzca una nuevo";
+        }
     }
     return false;
 }
