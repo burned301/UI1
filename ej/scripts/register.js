@@ -3,9 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     studentForm(false);
 });
 
-//pattern="(\d){9}" oninvalid="setCustomValidity('Introduzca los 9 dígitos de su NIA')"
-
-
 function register(){
     let valid = true;
     let user = {};
