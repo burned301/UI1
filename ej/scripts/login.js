@@ -12,7 +12,7 @@ function validateLoginForm() {
 
     if(user === null){
         document.querySelector('#login-error').style.display = 'flex';
-    } else if(password === user.password){
+    } else if(password === user.password) {
         setCurrentUser(user);
         window.location.href = 'index.html';
     }
