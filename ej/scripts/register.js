@@ -35,6 +35,7 @@ function register(){
     if(valid) {
         if(getUser(user.email) === null){
             addUser(user);
+            window.location.href = 'login.html';
         }else {
             document.querySelector("#email-error").innerHTML = "Email ya en uso, por favor introduzca una nuevo";
         }

@@ -2,13 +2,14 @@
 function validateLoginForm() {
     const email = document.forms['login']['user'].value;
     const password = document.forms['login']['password'].value;
-    const userCredentials = getCookie(email);
-    if (userCredentials !== '') {
-        if (password === userCredentials.split('=')[1]) {
-            window.location.href = 'index.html';
-        }
-    } else {
+
+
+    const user = getUser(email);
+    if(user === null){
         document.querySelectorAll('#login-error').style.display = 'flex';
+    } else if(password === user.password){
+        setCurrentUser(user);
+        window.location.href = 'index.html';
     }
     return false;
 }

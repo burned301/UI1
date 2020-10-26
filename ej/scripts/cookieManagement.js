@@ -2,6 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if(getUsers() === null) createUserDB();
 });
 
+function setCurrentUser(user){
+    delete user.password;
+    setCookie(user, "current_user", 10);
+}
+
 function getUser(email){
     const users = getUsers();
     let result = null
@@ -34,7 +39,6 @@ function addUser(user){
     }
     setCookie(db, "db", 10);
 }
-
 
 function setCookie(cookie, name, exdays) {
     const d = new Date();
