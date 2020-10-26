@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     if(getCurrentUser() !== null) window.location.href = 'index.html';
+    document.querySelector('#form-submit').addEventListener('click',validateLoginForm);
+
 });
 
 
