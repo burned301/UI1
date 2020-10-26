@@ -10,7 +10,7 @@
     </head>
     <body>
         <div id="login">
-            <form id="login-form" name="login" onsubmit="return validateLoginForm()">
+            <form id="login-form" name="login" onsubmit="return false">
                 <div id="login-error">
                     Los datos introducidos no son correctos. Por favor, inténtelo de nuevo.
                 </div>
@@ -18,7 +18,7 @@
                 <input type="text" name="email" id="user">
                 <label for="password">Contraseña</label>
                 <input type="password" name="password" id="password">
-                <button type="submit">Acceder</button>
+                <button type="submit" onclick="validateLoginForm()">Acceder</button>
             </form>
             <br><br>
             <a href="register.html">¿No tiene cuenta? Regístrese</a>

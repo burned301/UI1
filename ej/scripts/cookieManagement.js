@@ -7,6 +7,12 @@ function setCurrentUser(user){
     setCookie(user, "current_user", 10);
 }
 
+function getCurrentUser(){
+    const currentUser = getCookie("current_user");
+    if (currentUser === null) return null;
+    return JSON.parse(currentUser.substring(1));
+}
+
 function getUser(email){
     const users = getUsers();
     let result = null
@@ -51,9 +57,11 @@ function getCookie(cname) {
     const name = cname + '=';
     const decodedCookie = decodeURIComponent(document.cookie);
     const ca = decodedCookie.split(';');
+    console.log(ca);
     for (let i = 0; i < ca.length; i++) {
         let c = ca[i];
         if (c.trim().indexOf(name) === 0) {
+            console.log(c.substring(name.length+1, c.length));
             return c.substring(name.length, c.length);
         }
     }

@@ -3,8 +3,23 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.message-pic').forEach( image => {
         image.addEventListener('click',sendMail);
     })
+    loadUser();
+
 });
 
+function logOut(){
+    setCookie("","current_user", -1);
+    window.location.href = "login.html";
+}
+
+function loadUser(){
+    const user = getCurrentUser();
+    if(user === null){
+        window.location.href = "login.html";
+    }else{
+        document.querySelector("#user-name").innerHTML = user.name;
+    }
+}
 
 function sendMail(to,subject,message){
     window.location.href = `mailto:${to}?subject=${subject}&body=${message}%20goes%20here`;

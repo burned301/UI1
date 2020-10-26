@@ -6,6 +6,7 @@
         <title>Estructuras de Datos y Algoritmos</title>
         <link rel="stylesheet" href="style/index.css">
         <script src="scripts/index.js"></script>
+        <script src="scripts/cookieManagement.js"></script>
     </head>
     <body>
         <header>
@@ -23,12 +24,20 @@
                 <a  onclick="showSection('subjects')" href=""><img id="page-logo" src="images/gestia3.png" alt="logo" width="50"></a>
                 <a  onclick="showSection('subjects')" href="">Estructuras de Datos y Algoritmos</a>
             </div>
-            <div id="header-options">
-                <div><a href="#">Calendario</a></div>
-                <div><a href="#">Tutorías</a></div>
-                <div><a href="#">Contacta con tu delegado</a></div>
-                <div><a href="#">Ajustes</a></div>
+
+            <div id="user">
+                <div id="header-options">
+                    <div><a href="#">Calendario</a></div>
+                    <div><a href="#">Tutorías</a></div>
+                    <div><a href="#">Ajustes</a></div>
+                    <div><a href="#" onclick="logOut()">Cerrar Sesión</a></div>
+                </div>
+                <div id="user-data">
+                    <div id="user-name"></div>
+                    <img alt="profile picture" class="profile-pic" src="images/icon.png">
+                </div>
             </div>
+
         </header>
         <div id="columns">
             <div id="col-left" class="column">
