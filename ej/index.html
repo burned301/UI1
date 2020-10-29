@@ -13,7 +13,8 @@
             <div id="dropdown">
                 <img src="images/menu.png" id="dropbtn" alt="menu">
                 <div id="dropdown-content">
-                    <div class="course-menu" onclick="showSection('students-list')">Listado de estudiantes</div>
+                    <div class="course-menu estudiante" onclick="showSection('student-subject')">Mis asignaturas</div>
+                    <div class="course-menu admin" onclick="showSection('students-list')"  >Listado de estudiantes</div>
                     <div class="course-menu" onclick="showSection('students-forum')">Foro de la asignatura</div>
                     <div class="course-menu" onclick="showSection('students-grades')">Calificaciones</div>
                     <div class="course-menu" onclick="showSection('subjects')">Novedades</div>
@@ -24,7 +25,6 @@
                 <a  onclick="showSection('subjects')" href=""><img id="page-logo" src="images/gestia3.png" alt="logo" width="50"></a>
                 <a  onclick="showSection('subjects')" href="">Estructuras de Datos y Algoritmos</a>
             </div>
-
             <div id="user">
                 <div id="header-options">
                     <div><a href="#">Calendario</a></div>
@@ -37,12 +37,12 @@
                     <img alt="profile picture" class="profile-pic" src="images/icon.png">
                 </div>
             </div>
-
         </header>
         <div id="columns">
             <div id="col-left" class="column">
                 <div id="col-title-left" class="column-title-secondary course-menu" onclick="showSection('subjects')">Estructuras de Datos y Algoritmos</div>
-                <div class="course-menu" onclick="showSection('students-list')"  >Listado de estudiantes</div>
+                <div class="course-menu estudiante" onclick="showSection('student-subject')">Mis asignaturas</div>
+                <div class="course-menu admin" onclick="showSection('students-list')"  >Listado de estudiantes</div>
                 <div class="course-menu" onclick="showSection('subject-forum')"  >Foro de la asignatura</div>
                 <div class="course-menu" onclick="showSection('students-grades')">Calificaciones</div>
                 <div id="tablet-options">
@@ -413,92 +413,100 @@
                 </div>
                 <div id="subject-forum">
                     <div class="column-title-principal">Foro de la Asignatura</div>
-                    <div class="forum-message">
-                        <div class="forum-message-title">
+                    <div class="forum-subject">
+                        <div class="forum-subject-title">
                             Mirad el articulo que encontré sobre árboles de Van Embde Boas!
                         </div>
-                        <div class="forum-message-info">
-                            <div class="forum-message-count">
+                        <div class="forum-subject-info">
+                            <div class="forum-subject-count">
                                 1
                             </div>
-                            <div class="forum-message-date">
+                            <div class="forum-subject-date">
                                 16/03/2025
                             </div>
-                            <div class="forum-message-time">
+                            <div class="forum-subject-time">
                                 00:29
                             </div>
                         </div>
                     </div>
-                    <div class="forum-message">
-                        <div class="forum-message-title">
+                    <div class="forum-subject">
+                        <div class="forum-subject-title">
                             Necesito ayuda con el ejercicio 3.6
                         </div>
-                        <div class="forum-message-info">
-                            <div class="forum-message-count">
+                        <div class="forum-subject-info">
+                            <div class="forum-subject-count">
                                 1
                             </div>
-                            <div class="forum-message-date">
+                            <div class="forum-subject-date">
                                 01/03/2025
                             </div>
-                            <div class="forum-message-time">
+                            <div class="forum-subject-time">
                                 01:32
                             </div>
                         </div>
                     </div>
-                    <div class="forum-message">
-                        <div class="forum-message-title">
+                    <div class="forum-subject">
+                        <div class="forum-subject-title">
                             Por que árboles en vez de array?
                         </div>
-                        <div class="forum-message-info">
-                            <div class="forum-message-count">
+                        <div class="forum-subject-info">
+                            <div class="forum-subject-count">
                                 35
                             </div>
-                            <div class="forum-message-date">
+                            <div class="forum-subject-date">
                                 27/02/2025
                             </div>
-                            <div class="forum-message-time">
+                            <div class="forum-subject-time">
                                 21:45
                             </div>
                         </div>
                     </div>
-                    <div class="forum-message">
-                        <div class="forum-message-title">
+                    <div class="forum-subject">
+                        <div class="forum-subject-title">
                             Ejercicios sobre listas doblemente enlazadas (Tema 2)
                         </div>
-                        <div class="forum-message-info">
-                            <div class="forum-message-count">
+                        <div class="forum-subject-info">
+                            <div class="forum-subject-count">
                                 19
                             </div>
-                            <div class="forum-message-date">
+                            <div class="forum-subject-date">
                                 15/02/2025
                             </div>
-                            <div class="forum-message-time">
+                            <div class="forum-subject-time">
                                 17:30
                             </div>
                         </div>
                     </div>
-                    <div class="forum-message">
-                        <div class="forum-message-title">
+                    <div class="forum-subject">
+                        <div class="forum-subject-title">
                             Primera clase del curso
                         </div>
-                        <div class="forum-message-info">
-                            <div class="forum-message-count">
+                        <div class="forum-subject-info">
+                            <div class="forum-subject-count">
                                 1
                             </div>
-                            <div class="forum-message-date">
+                            <div class="forum-subject-date">
                                 07/02/2025
                             </div>
-                            <div class="forum-message-time">
+                            <div class="forum-subject-time">
                                 09:13
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <form>
-                            <textarea></textarea>
+                    <div id="forum-messages"></div>
+                    <div id="forum-subject-send">
+                        <form onsubmit="return false">
+                            <label for="forum-subject-new"></label>
+                            <textarea id="forum-subject-new"></textarea>
+                            <button id="forum-subject-send-button" type="submit">Enviar</button>
                         </form>
-
                     </div>
+                </div>
+                <div id="student-subjects">
+                    <ul>
+                        <li>Heurísticca y Optimización</li>
+                        <li>Interfaces </li>
+                    </ul>
                 </div>
             </div>
             <div id="col-right" class="column">

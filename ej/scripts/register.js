@@ -13,7 +13,6 @@ function register(){
     document.querySelectorAll('input').forEach( input =>{
         const name = input.getAttribute('name');
         const regex = new RegExp(input.getAttribute('data-pattern'));
-        console.log(input.value);
         if(!regex.test(input.value)){
             valid = false;
             document.querySelector(`#${name}-error`).innerHTML = input.getAttribute('data-error') ;

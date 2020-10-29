@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    if(getUsers() === null) createUserDB();
+    if(getDB() === null) createDB();
 });
 
 function setCurrentUser(user){
@@ -25,14 +25,27 @@ function getUser(email){
 }
 
 function getUsers(){
-    const users = getCookie("db");
-    if(users === null) return null;
-    return JSON.parse(users)["users"];
+    return getDBField('users');
 }
 
-function createUserDB(){
+function getMessages(){
+    return getDBField('messages')
+}
+
+function getDBField(field){
+    const db = getDB();
+    if(db === null) return null;
+    return JSON.parse(db)[`${field}`];
+}
+
+function getDB(){
+    return getCookie("db");
+}
+
+function createDB(){
     const cookie = {
-        users: []
+        users: [],
+        messages: []
     };
     setCookie(cookie, "db", 10);
 }
@@ -57,11 +70,9 @@ function getCookie(cname) {
     const name = cname + '=';
     const decodedCookie = decodeURIComponent(document.cookie);
     const ca = decodedCookie.split(';');
-    console.log(ca);
     for (let i = 0; i < ca.length; i++) {
         let c = ca[i];
         if (c.trim().indexOf(name) === 0) {
-            console.log(c.substring(name.length+1, c.length));
             return c.substring(name.length, c.length);
         }
     }
