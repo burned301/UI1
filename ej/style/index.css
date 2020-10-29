@@ -9,8 +9,8 @@ a {
 }
 
 
-/* HEADER */
-header {
+/* #header */
+#header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -301,8 +301,8 @@ footer {
 /* DESKTOP */
 @media screen and (min-width: 769px) {
 
-  /* HEADER */
-  header {
+  /* #header */
+  #header {
     margin: 0.5% 5% 0.25% 5%;
   }
 
@@ -405,7 +405,7 @@ footer {
 
 
   /* STUDENT-GRADES.HTML CONTENT */
-  table {
+  .student-grade-table{
     font-size: 2vw;
   }
 
@@ -443,8 +443,8 @@ footer {
 /* TABLET */
 @media screen and (min-width: 601px) and (max-width: 768px) {
 
-  /* HEADER */
-  header {
+  /* #header */
+  #header {
     margin: 0.5% 2% 0.25% 2%;
   }
 
@@ -548,17 +548,19 @@ footer {
 
 
   /* STUDENT-GRADES.HTML CONTENT */
-  table {
+  .student-grade-table {
     font-size: 2vw;
   }
+
+
 }
 
 
 /*MOBILE*/
 @media screen and (max-width: 600px){
 
-  /* HEADER */
-  header {
+  /* #header */
+  #header {
     margin: 0.5% 2% 0.25% 2%;
   }
 
@@ -596,7 +598,7 @@ footer {
     display: none;
   }
 
-  header {
+  #header {
     justify-content: normal;
   }
 
@@ -690,7 +692,7 @@ footer {
 
 
   /* STUDENT-GRADES.HTML CONTENT */
-  table {
+  .student-grade-table {
     font-size: 3vw;
   }
 }

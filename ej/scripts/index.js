@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
+    calendar();
+    loadUser();
+    calendar();
+    showSection("subjects");
+
     document.querySelectorAll('.message-pic').forEach( image => {
         image.addEventListener('click',sendMail);
     })
@@ -8,9 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#forum-subject-send-button').addEventListener('click',sendMessage);
     document.querySelector('#forum-subject-send').style.display = 'none';
     document.querySelector('#dropdown').addEventListener('click', dropDownClick);
-
-    loadUser();
-    showSection("subjects");
 });
 
 function logOut(){
@@ -166,6 +168,31 @@ function downloadTable() {
         $(getCurrentUser().role === "Estudiante" ? "#noadmin-student-grade-table" : "#admin-student-grade-table").table2excel({
             filename: "student-grade-table",
             name: "Estudiante"
+        });
+    });
+}
+
+function calendar(){
+    $(function(){
+        $("#calendar").simpleCalendar({
+            displayEvent: true,
+            events: [
+                {
+                    startDate:new Date(new Date().setHours(new Date().getHours() + 24)).toDateString(),
+                    endDate:new Date(new Date().setHours(new Date().getHours() + 25)).toISOString(),
+                    summary:'Interfaces de Usuario: Examen Tema 1'
+                },
+                {
+                    startDate:new Date(new Date().setHours(new Date().getHours() + 48)).toDateString(),
+                    endDate:new Date(new Date().setHours(new Date().getHours() + 49)).toISOString(),
+                    summary:'Interfaces de Usuario: Examen Tema 2'
+                },
+                {
+                    startDate:new Date(new Date().setHours(new Date().getHours() + 72)).toDateString(),
+                    endDate:new Date(new Date().setHours(new Date().getHours() + 73)).toISOString(),
+                    summary:'Interfaces de Usuario: Examen Tema 3'
+                }
+            ]
         });
     });
 }
