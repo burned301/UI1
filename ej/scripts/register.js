@@ -26,7 +26,7 @@ function register(){
         document.querySelector(`#terms-error`).innerHTML = checked.getAttribute('data-error')
     }
 
-    user["rol"] = getRol();
+    user["role"] = getRol();
     user["language"] = getLanguage();
     if(valid) {
         if(getUser(user.email) === null){

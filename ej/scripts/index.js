@@ -27,7 +27,7 @@ function loadUser(){
         return
     }
     document.querySelector("#user-name").innerHTML = user.name;
-    if(user.rol === "Estudiante"){
+    if(user.role === "Estudiante"){
         document.querySelectorAll('.admin').forEach(item => {
             item.style.display = 'none';
         })
@@ -159,4 +159,13 @@ function dropDownClick(){
         document.querySelector('#dropdown-content').style.display = 'block';
         dropDownState = true;
     }
+}
+
+function downloadTable() {
+    $(function() {
+        $(getCurrentUser().role === "Estudiante" ? "#noadmin-student-grade-table" : "#admin-student-grade-table").table2excel({
+            filename: "student-grade-table",
+            name: "Estudiante"
+        });
+    });
 }

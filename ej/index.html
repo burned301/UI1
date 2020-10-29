@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="style/index.css">
         <script src="scripts/index.js"></script>
         <script src="scripts/cookieManagement.js"></script>
+        <script src="scripts/jquery.js"></script>
+        <script src="scripts/table2excel.js"></script>
     </head>
     <body>
         <header>
@@ -218,7 +220,7 @@
                 </div>
                 <div id="students-grades">
                     <div class="column-title-principal">Calificaciones</div>
-                    <table class="admin student-grade-table">
+                    <table id="admin-student-grade-table" class="admin student-grade-table">
                         <tr>
                             <th>Estudiante</th>
                             <th>Actividad 1</th>
@@ -316,7 +318,8 @@
                             <td>4.20</td>
                         </tr>
                     </table>
-                    <table class="estudiante student-grade-table">
+                    <button onclick="downloadTable()">CLICK ME!!!!!!!!!!</button>
+                    <table id="noadmin-student-grade-table" class="estudiante student-grade-table">
                         <tr>
                             <th>Actividad 1</th>
                             <th>Actividad 2</th>
