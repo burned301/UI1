@@ -1,7 +1,6 @@
 a {
-    text-decoration: none;
-    text-underline: none;
     color: black;
+    text-align: center;
 }
 
 #login-error {
@@ -10,14 +9,16 @@ a {
 }
 
 body {
-    height: 100vh;
-    min-height: 100vh;
     margin: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 #login, #register {
+    min-height: 70vh;
     width: 30%;
     display: flex;
     flex-direction: column;
@@ -42,46 +43,46 @@ button:hover{
     color: white;
 }
 
+/* LOGIN */
+form {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+input{
+    margin: 5px 0 15px 0;
+    padding: 0;
+    border: 0;
+    height: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+button{
+    font-size: 12pt;
+    margin: 5px 0 15px 0;
+    height: 35px;
+}
+
+label::after{
+    content: ":";
+}
+
+label {
+    font-size: 12pt;
+}
 
 /* DESKTOP */
 @media screen and (min-width: 769px) {
-    /* LOGIN */
-    form {
-        height: auto;
-        display: flex;
-        flex-direction: column;
-
-    }
-
-    input{
-        margin: 5px 0 15px 0;
-        height: 30px;
-        text-align: center;
-        width: 100%;
-    }
-
-    button{
-        font-size: 0.8vw;
-        margin: 5px 0 15px 0;
-        height: 35px;
-    }
     /* FOOTER */
     footer {
         display: flex;
-        position: absolute;
-        bottom: 0;
-        width: 100vw;
+        width: 100%;
         height: 20px;
         background-color: black;
         margin-top: 10px;
-    }
-
-    label::after{
-        content: ":";
-    }
-
-    label {
-        font-size: 1.2vw;
     }
 
     footer div {
@@ -107,9 +108,14 @@ button:hover{
 
 /* TABLET */
 @media screen and (min-width: 601px) and (max-width: 768px) {
+    footer {
+        display: none;
+    }
 }
 
 /*MOBILE*/
 @media screen and (max-width: 600px) {
-
+    footer {
+        display: none;
+    }
 }

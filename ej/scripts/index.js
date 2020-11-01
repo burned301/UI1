@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    calendar();
     loadUser();
+    calendar();
     calendar();
     showSection("subjects");
 
@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#forum-subject-send').style.display = 'none';
     document.querySelector('#dropdown').addEventListener('click', dropDownClick);
 });
+
+document.addEventListener('DOM')
 
 function logOut(){
     if(confirm("¿Cerrar Sesión?")){
