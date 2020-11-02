@@ -38,6 +38,7 @@ body {
 
 .error {
     color: red;
+    margin: 1% 1% 1% 0;
 }
 
 #form-login{
@@ -57,7 +58,7 @@ form {
     width: 80%;
 }
 
-input{
+input, select{
     margin: 5px 0 15px 0;
     padding: 0;
     border: 0;

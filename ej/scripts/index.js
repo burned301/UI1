@@ -15,8 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#dropdown').addEventListener('click', dropDownClick);
 });
 
-document.addEventListener('DOM')
-
 function logOut(){
     if(confirm("¿Cerrar Sesión?")){
         setCookie("","current_user", -1);
@@ -92,7 +90,6 @@ function showSection(section){
             subject_forum.style.display = 'none';
             break;
         default:
-            alert("Estás cargando el deafult lmao");
             subjects.style.display = 'block';
             students_grades.style.display = 'none';
             student_list.style.display = 'none';
@@ -104,6 +101,7 @@ function showSection(section){
 }
 
 function forum(){
+    document.querySelector('#forum-home').style.display = 'block';
     document.querySelectorAll(".forum-subject").forEach(message =>{
         message.style.display = 'none';
     });
@@ -113,9 +111,14 @@ function forum(){
 }
 
 function hideMessages(){
+    document.querySelector('#forum-home').style.display = 'none';
     document.querySelectorAll('.forum-message').forEach(message => {
         message.style.display = 'none';
     });
+    document.querySelectorAll(".forum-subject").forEach(message =>{
+        message.style.display = 'flex';
+    });
+    document.querySelector('#forum-subject-send').style.display = 'none';
 }
 
 function sendMessage(){

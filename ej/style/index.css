@@ -267,6 +267,12 @@ textarea{
   margin: 0 0 0 auto;
 }
 
+#forum-home{
+  cursor: pointer;
+  width: 30px;
+  margin: 1%;
+}
+
 /* STUDENT-GRADES.HTML CONTENT */
 .student-grade-table {
   font-family: sans-serif;
@@ -697,7 +703,6 @@ footer {
   .forum-subject-info {
     width: 100%;
   }
-
 
   /* STUDENT-GRADES.HTML CONTENT */
   .student-grade-table {

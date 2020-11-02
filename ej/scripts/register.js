@@ -3,12 +3,17 @@ document.addEventListener('DOMContentLoaded', () => {
     studentForm(false);
 });
 
-function register(){
-    let valid = true;
-    let user = {};
+function cleanErrors(){
     document.querySelectorAll('.error').forEach(error =>{
         error.innerHTML = "";
     });
+}
+
+function register(){
+    let valid = true;
+    let user = {};
+
+    cleanErrors();
 
     document.querySelectorAll('input').forEach( input =>{
         const name = input.getAttribute('name');

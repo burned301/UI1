@@ -5,8 +5,8 @@
         <meta charset="UTF-8">
         <title>Estructuras de Datos y Algoritmos</title>
         <link rel="stylesheet" href="style/index.css">
-        <script src="scripts/index.js"></script>
         <script src="scripts/cookieManagement.js"></script>
+        <script src="scripts/index.js"></script>
         <script src="scripts/jquery.js"></script>
         <script src="scripts/table2excel.js"></script>
         <link rel="stylesheet" href="style/simple-calendar.css">
@@ -19,7 +19,7 @@
                 <div id="dropdown-content">
                     <div class="course-menu estudiante" onclick="showSection('student-subject')">Mis asignaturas</div>
                     <div class="course-menu admin" onclick="showSection('students-list')"  >Listado de estudiantes</div>
-                    <div class="course-menu" onclick="showSection('students-forum')">Foro de la asignatura</div>
+                    <div class="course-menu" onclick="showSection('subject-forum')">Foro de la asignatura</div>
                     <div class="course-menu" onclick="showSection('students-grades')">Calificaciones</div>
                     <div class="course-menu" onclick="showSection('subjects')">Novedades</div>
                     <div class="course-menu" onclick="showSection('subjects')">Eventos</div>
@@ -430,6 +430,7 @@
                 </div>
                 <div id="subject-forum">
                     <div class="column-title-principal">Foro de la Asignatura</div>
+                    <img id="forum-home" onclick="showSection('subject-forum')" src="images/house.png" alt="home">
                     <div class="forum-subject">
                         <div class="forum-subject-title">
                             Mirad el articulo que encontré sobre árboles de Van Embde Boas!
@@ -520,12 +521,13 @@
                     </div>
                 </div>
                 <div id="student-subjects">
+                    <div class="column-title-principal">Mis Asignaturas</div>
                     <ul>
-                        <li>Heurísticca y Optimización</li>
-                        <li>Interfaces de Usuario</li>
-                        <li>Ingeniería del Software</li>
-                        <li>Arquitectura de Computadores</li>
-                        <li>Redes de Ordenadores</li>
+                        <li><a>Heurísticca y Optimización</a></li>
+                        <li><a>Interfaces de Usuario</a></li>
+                        <li><a>Ingeniería del Software</a></li>
+                        <li><a>Arquitectura de Computadores</a></li>
+                        <li><a>Redes de Ordenadores</a></li>
                     </ul>
                 </div>
             </div>
@@ -537,9 +539,6 @@
 
                 <div class="column-title-secondary">Eventos</div>
                 <div id="calendar"></div>
-                <p>26/10/2020 - Entrega actividad 1</p>
-                <p>01/11/2020 - Entrega actividad 2</p>
-                <p>06/11/2020 - Entrega actividad 3</p>
             </div>
         </div>
         <footer>
