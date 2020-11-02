@@ -18,24 +18,30 @@ body {
 }
 
 #login, #register {
-    min-height: 70vh;
+
     width: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: turquoise;
+    margin: auto;
 }
 
 #login {
-    padding-top: 30vh;
+    padding: 50px;
+    min-height: 30vh;
 }
 
 #register{
-    padding-top: 10vh;
+    padding: 50px;
 }
 
 .error {
     color: red;
+}
+
+#form-login{
+    margin-top: 30px;
 }
 
 button:hover{

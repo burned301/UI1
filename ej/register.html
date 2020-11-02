@@ -14,7 +14,6 @@
                 <label for="username">Nombre de usuario</label>
                 <div id="username-error" class="error"></div>
                 <input id="username"  type="text" name="username" data-pattern="[a-zA-Z0-9]+" data-error="Introduzca su nombre de usuario. Solo números y letras." placeholder="Nombre de usuario">
-                <!--pattern="[a-zA-Z0-9]+" oninvalid="setCustomValidity('Introduzca su nombre de usuario. Solo caracteres alfanuméricos')"-->
 
                 <label for="nia">NIA</label>
                 <div id="nia-error" class="error"></div>
@@ -76,6 +75,8 @@
 
                 <button id="form-reset" type="reset">Borrar</button>
                 <button id="form-submit" type="submit">Guardar</button>
+
+                <button id="form-login" type="button" onclick="window.location.href='login.html'">Ya tiene cuenta? Inicie sesión</button>
             </form>
         </div>
         <footer>
