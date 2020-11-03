@@ -15,6 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#dropdown').addEventListener('click', dropDownClick);
 });
 
+window.onpopstate = event => {
+    showSection(event.state.section);
+}
+
 function logOut(){
     if(confirm("¿Cerrar Sesión?")){
         setCookie("","current_user", -1);
@@ -46,6 +50,8 @@ function sendMail(to,subject,message){
 }
 
 function showSection(section){
+    history.pushState({section: section}, "", `${section}`);
+
     const subjects = document.querySelector('#subjects');
     const students_grades = document.querySelector('#students-grades');
     const student_list = document.querySelector('#students-list');
