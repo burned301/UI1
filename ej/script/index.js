@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    loadUser();
+    showSection('index');
     calendar();
-    calendar();
-    showSection("subjects");
 
     document.querySelectorAll('.message-pic').forEach( image => {
         image.addEventListener('click',sendMail);
@@ -16,21 +14,20 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.onpopstate = event => {
-    showSection(event.state.section);
+    //showSection(event.state.section);
 }
 
 function logOut(){
     if(confirm("¿Cerrar Sesión?")){
         setCookie("","current_user", -1);
-        window.location.href = "login.html";
+        showSection('login');
     }
 }
 
 function loadUser(){
     const user = getCurrentUser();
     if(user === null){
-        window.location.href = "login.html";
-        return
+        return false;
     }
     document.querySelector("#user-name").innerHTML = user.name;
     if(user.role === "Estudiante"){
@@ -50,8 +47,10 @@ function sendMail(to,subject,message){
 }
 
 function showSection(section){
-    history.pushState({section: section}, "", `${section}`);
-
+    //history.pushState({section: section}, "", `${section}`);
+    const index = document.querySelector('#index');
+    const login = document.querySelector('#login');
+    const register = document.querySelector('#register')
     const subjects = document.querySelector('#subjects');
     const students_grades = document.querySelector('#students-grades');
     const student_list = document.querySelector('#students-list');
@@ -95,6 +94,26 @@ function showSection(section){
             student_subjects.style.display = 'block';
             subject_forum.style.display = 'none';
             break;
+        case "index":
+            if(getCurrentUser()===null){
+                showSection('login');
+            }else{
+                loadUser();
+                index.style.display = "block";
+                register.style.display = "none";
+                login.style.display = "none";
+            }
+            break;
+        case "login":
+            index.style.display = "none";
+            register.style.display = "none";
+            login.style.display = "flex";
+            break;
+        case "register":
+            index.style.display = "none";
+            register.style.display = "flex";
+            login.style.display = "none";
+            break
         default:
             subjects.style.display = 'block';
             students_grades.style.display = 'none';

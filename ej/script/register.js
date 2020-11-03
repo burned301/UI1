@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelector('#form-submit').addEventListener('click', register);
+    document.querySelector('#register-form-submit').addEventListener('click', register);
     studentForm(false);
 });
 
@@ -14,8 +14,7 @@ function register(){
     let user = {};
 
     cleanErrors();
-
-    document.querySelectorAll('input').forEach( input =>{
+    document.querySelectorAll('.register').forEach( input =>{
         const name = input.getAttribute('name');
         const regex = new RegExp(input.getAttribute('data-pattern'));
         if(!regex.test(input.value)){
@@ -36,7 +35,7 @@ function register(){
     if(valid) {
         if(getUser(user.email) === null){
             addUser(user);
-            window.location.href = 'login.html';
+            showSection('login');
         }else {
             document.querySelector("#email-error").innerHTML = "Email ya en uso, por favor introduzca una nuevo";
         }

@@ -1,14 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-    if(getCurrentUser() !== null) window.location.href = 'index.html';
-    document.querySelector('#form-submit').addEventListener('click',validateLoginForm);
-
+    //if(getCurrentUser() !== null) showSection('index');
+    document.querySelector('#login-form-submit').addEventListener('click',validateLoginForm);
 });
 
-
-
 function validateLoginForm() {
-    const email = document.forms['login']['user'].value;
-    const password = document.forms['login']['password'].value;
+    const email = document.forms['login']['login-user'].value;
+    const password = document.forms['login']['login-password'].value;
 
     const user = getUser(email);
 
@@ -16,7 +13,7 @@ function validateLoginForm() {
         document.querySelector('#login-error').style.display = 'flex';
     } else if(password === user.password) {
         setCurrentUser(user);
-        window.location.href = 'index.html';
+        showSection('index')
     }
     return false;
 }
