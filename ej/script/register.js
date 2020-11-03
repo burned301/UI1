@@ -34,12 +34,14 @@ function register(){
     user["language"] = getLanguage();
     if(valid) {
         if(getUser(user.email) === null){
+            document.querySelector('#register-form').reset();
             addUser(user);
             showSection('login');
         }else {
             document.querySelector("#email-error").innerHTML = "Email ya en uso, por favor introduzca una nuevo";
         }
     }
+
     return false;
 }
 

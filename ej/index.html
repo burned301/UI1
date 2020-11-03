@@ -520,7 +520,8 @@
                         <div id="forum-messages"></div>
                         <div id="forum-subject-send">
                             <form onsubmit="return false">
-                                <label for="forum-subject-new"></label>
+                                <label for="forum-subject-new">Escribe un nuevo mensaje!</label>
+                                <div id="forum-subject-new-error" class="error"></div>
                                 <textarea id="forum-subject-new"></textarea>
                                 <button id="forum-subject-send-button" type="submit">Enviar</button>
                             </form>
@@ -550,7 +551,7 @@
         </div>
         <div id="forms">
             <div id="login">
-                <form id="login-form" name="login" onsubmit="return false">
+                <form id="login-form" class="form" name="login" onsubmit="return false">
                     <div id="login-error">
                         Los datos introducidos no son correctos. Por favor, inténtelo de nuevo.
                     </div>
@@ -564,7 +565,7 @@
                 <a onclick="showSection('register')">¿No tiene cuenta? Regístrese</a>
             </div>
             <div id="register">
-                <form name="register" id="register-form" lang="es" onsubmit="return false">
+                <form name="register" class="form" id="register-form" lang="es" onsubmit="return false">
                     <label for="username">Nombre de usuario</label>
                     <div id="username-error" class="error"></div>
                     <input id="username" class="register" type="text" name="username" data-pattern="[a-zA-Z0-9]+" data-error="Introduzca su nombre de usuario. Solo números y letras." placeholder="Nombre de usuario">

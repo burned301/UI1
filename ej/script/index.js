@@ -102,6 +102,7 @@ function showSection(section){
                 index.style.display = "block";
                 register.style.display = "none";
                 login.style.display = "none";
+                showSection('subjects');
             }
             break;
         case "login":
@@ -149,6 +150,15 @@ function hideMessages(){
 function sendMessage(){
     const user = getCurrentUser();
     const text =  document.querySelector("#forum-subject-new");
+    const error = document.querySelector('#forum-subject-new-error');
+    const regex = new RegExp('[a-zA-Z0-9]+');
+
+    error.innerHTML = "";
+
+    if(text.value === null || text.value.trim().length === 0){
+        error.innerHTML = "No puede enviar un mensaje en blanco!"
+        return false;
+    }
 
     const message = document.createElement('div');
     message.setAttribute('class', 'forum-message');
@@ -162,7 +172,7 @@ function sendMessage(){
     const message_body = document.createElement('div');
 
     name.innerHTML = user.name;
-    message_body.innerHTML =text.value;
+    message_body.innerHTML =text.value.replace(/\r?\n/g,'<br/>');
     text.value = '';
 
     const date = document.createElement('div');

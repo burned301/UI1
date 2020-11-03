@@ -51,7 +51,7 @@ a {
 }
 
 /* LOGIN */
-form {
+.form {
     height: auto;
     display: flex;
     flex-direction: column;
@@ -80,4 +80,5 @@ label::after{
 
 label {
     font-size: 12pt;
+    margin: 1%;
 }
