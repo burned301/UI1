@@ -8,13 +8,12 @@ a {
     color: red;
 }
 
-body {
+#forms {
     margin: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    min-height: 100vh;
 }
 
 #login, #register {
@@ -45,7 +44,7 @@ body {
     margin-top: 30px;
 }
 
-button:hover{
+.form-button:hover {
     background-color: black;
     color: white;
 }
@@ -67,7 +66,7 @@ input, select{
     width: 100%;
 }
 
-button{
+.form-button{
     font-size: 12pt;
     margin: 5px 0 15px 0;
     height: 35px;
@@ -84,49 +83,4 @@ label {
 
 a{
     cursor: pointer;
-}
-/* DESKTOP */
-@media screen and (min-width: 769px) {
-    /* FOOTER */
-    footer {
-        display: flex;
-        width: 100%;
-        height: 20px;
-        background-color: black;
-        margin-top: 10px;
-    }
-
-    footer div {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: lightgray;
-        margin-left: 1px;
-    }
-
-    #university-page-link {
-        width: 25%;
-    }
-
-    #copyright {
-        width: 50%;
-    }
-
-    #privacy-notice {
-        width: 25%;
-    }
-}
-
-/* TABLET */
-@media screen and (min-width: 601px) and (max-width: 768px) {
-    footer {
-        display: none;
-    }
-}
-
-/*MOBILE*/
-@media screen and (max-width: 600px) {
-    footer {
-        display: none;
-    }
 }
