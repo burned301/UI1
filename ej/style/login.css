@@ -1,6 +1,7 @@
 a {
     color: black;
     text-align: center;
+    cursor: pointer;
 }
 
 #login-error {
@@ -27,8 +28,8 @@ a {
 }
 
 #login {
-    padding: 50px;
-    min-height: 30vh;
+    padding: 20vh;
+    min-height: 55vh;
 }
 
 #register{
@@ -79,8 +80,4 @@ label::after{
 
 label {
     font-size: 12pt;
-}
-
-a{
-    cursor: pointer;
 }
